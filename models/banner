@@ -1,0 +1,13 @@
+const mongoose = require("mongoose");
+
+const bannerSchema = new mongoose.Schema(
+  {
+    _image: String,
+    _heading: String,
+    _bannerType: String,
+    _subheading: String,
+  },
+  { collection: "banner" }
+);
+
+module.exports = mongoose.model("banner", bannerSchema);

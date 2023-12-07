@@ -1,0 +1,18 @@
+const mongoose = require("mongoose");
+
+// Define the schema for the 'Item' model
+const customerNotifSchema = new mongoose.Schema(
+  {
+    _notifID: {
+      type: Number,
+      unique: true,
+    },
+    _date: String,
+    _title: String,
+    _description: String,
+    _name: String,
+  },
+  { collection: "customerNotification" }
+);
+
+module.exports = mongoose.model("customerNotification", customerNotifSchema);

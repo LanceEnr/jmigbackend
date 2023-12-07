@@ -1,0 +1,22 @@
+const mongoose = require("mongoose");
+
+// Define the schema for the 'Item' model
+const testimonialSchema = new mongoose.Schema(
+  {
+    _rating: Number,
+    _fullName: String,
+    _professionalTitle: String,
+    _testimonial: String,
+    _rating2: Number,
+    _fullName2: String,
+    _professionalTitle2: String,
+    _testimonial2: String,
+    _rating3: Number,
+    _fullName3: String,
+    _professionalTitle3: String,
+    _testimonial3: String,
+  },
+  { collection: "testimonial" }
+);
+
+module.exports = mongoose.model("Testimonial", testimonialSchema);
